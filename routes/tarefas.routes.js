@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
 
 router.get("/findById/:id", async (req, res) => {
     checkId(res, req.params.id);
-    await Tarefas.find({ _id: req.params.id })
+    await Tarefas.findById(req.params.id)
         .then((tarefa) => res.status(200).send(tarefa))
         .catch((err) => {
             console.error(err);
