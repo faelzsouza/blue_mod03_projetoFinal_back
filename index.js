@@ -17,7 +17,7 @@ const dbPass = process.env.DB_PASS;
 db(dbUrl, dbUser, dbPass, "ToDoApp");
 
 app.use(express.json());
-app.use(cors())
+app.use(cors(corsOptions))
 app.use("/tarefas", require("./routes/tarefas.routes"));
 
 app.listen(process.env.PORT || port, () =>
