@@ -6,7 +6,7 @@ const cors = require('cors')
 const app = express();
 const port = 3001;
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'https://front-todo-list.herokuapp.com',
     optionsSuccessStatus: 200
 }
 
