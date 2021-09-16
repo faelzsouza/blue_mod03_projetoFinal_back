@@ -13,7 +13,7 @@ const checkKeys = (res, body) => {
 }
 
 const checkDate = (body) => {
-    if (new Date(body.prazo) < new Date(Date.now())) {
+    if (new Date(body.prazo) < new Date(Date.now()).toLocaleDateString()) {
         return false
     }
     return true
